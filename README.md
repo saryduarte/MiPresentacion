@@ -1,143 +1,74 @@
- MiPresentacion
+# *MiPresentacion*
 
-Mi primera aplicación gráfica con C# y Avalonia UI 11
-
-Aplicación de escritorio desarrollada como proyecto académico para poner en práctica los conceptos de Programación Orientada a Objetos, interfaces gráficas y programación orientada a eventos.
-
----
-
- Descripción del proyecto
-
-MiPresentacion es una aplicación gráfica que permite al usuario ingresar su nombre, apellido y edad para generar una presentación personalizada.
-
-La aplicación cuenta con una interfaz sencilla e intuitiva, validación de datos y diferentes botones que permiten interactuar con el programa.
-
-🛠️ Tecnologías utilizadas
-
-Tecnología| Descripción
-C#| Lenguaje de programación.
-.NET 8| Plataforma de desarrollo.
-Avalonia UI 11| Framework para crear interfaces gráficas.
-XAML| Diseño de la interfaz de usuario.
-Visual Studio Code| Entorno de desarrollo.
-
- Funcionalidades principales
-
--  Ingresar datos: permite escribir nombre, apellido y edad.
--  Presentarme: genera un saludo personalizado.
--  Validar información: comprueba que los campos no estén vacíos y que la edad sea un número entero positivo.
--  Limpiar: borra los campos y restablece el mensaje inicial.
--  Cambiar saludo: permite alternar entre dos mensajes de presentación.
-
- Interfaz gráfica
-
-La interfaz fue construida utilizando los siguientes controles:
-
-Control| Función
-"Window"| Ventana principal.
-"StackPanel"| Organiza los elementos verticalmente.
-"TextBlock"| Muestra títulos, etiquetas y mensajes.
-"TextBox"| Permite ingresar información.
-"Button"| Ejecuta las acciones de la aplicación.
-
-También se utilizaron propiedades como "Margin", "Spacing", "FontSize" y "x:Name" para organizar y personalizar los elementos.
-
- Programación orientada a eventos
-
-La aplicación utiliza eventos "Click" para ejecutar acciones cuando el usuario presiona los botones.
-
-Evento| Descripción
-"Presentarme_Click"| Valida los datos y genera la presentación.
-"Limpiar_Click"| Limpia los campos y restablece la interfaz.
-"CambiarSaludo_Click"| Alterna entre los dos saludos disponibles.
-
-Validaciones implementadas:
-
-- "string.IsNullOrWhiteSpace()" para comprobar que los campos de texto no estén vacíos.
-- "int.TryParse()" para verificar que la edad sea un número entero.
-- Una condición para comprobar que la edad sea mayor que cero.
-
- Relación entre XAML y C#
-
-El archivo MainWindow.axaml contiene la estructura visual de la aplicación, incluyendo los botones, etiquetas y campos de texto.
-
-Por otro lado, MainWindow.axaml.cs contiene la lógica que permite que los controles funcionen.
-
-Ambos archivos se comunican mediante la propiedad "x:Name", que permite identificar los controles desde C#, y la propiedad "Click", que conecta los botones con sus respectivos métodos.
-
-De esta manera, la interfaz gráfica y la lógica de programación trabajan conjuntamente para ofrecer una aplicación interactiva.
+> *Mi primera aplicación gráfica con C# y Avalonia UI 11*  
+> Aplicación de escritorio desarrollada como proyecto académico para poner en práctica los conceptos de Programación Orientada a Objetos (POO), interfaces gráficas y programación orientada a eventos.
 
 ---
 
- Evidencias del funcionamiento
+## *Descripción del proyecto*
 
-1. Presentación personalizada
+*MiPresentacion* es una aplicación gráfica que permite al usuario ingresar su nombre, apellido y edad para generar una presentación personalizada.
 
-Muestra los datos ingresados y el mensaje generado por la aplicación.
-
-"Presentación personalizada" (screenshots/01-presentacion.png)
-
-2. Validación de datos
-
-Muestra la advertencia cuando el usuario deja el nombre vacío.
-
-"Validación de datos" (screenshots/02-validacion.png)
-
-3. Cambio de saludo
-
-Muestra el mensaje alternativo generado al presionar el botón correspondiente.
-
-"Saludo alternativo" (screenshots/03-saludo-alternativo.png)
-
-4. Limpiar campos
-
-Muestra la interfaz después de utilizar el botón Limpiar.
-
-"Limpiar campos" (screenshots/04-limpiar.png)
+La aplicación cuenta con una interfaz sencilla e intuitiva, validación de datos en tiempo real y botones para interactuar fluidamente con el programa.
 
 ---
 
- Instrucciones para ejecutar el proyecto
+## *🛠️ Tecnologías utilizadas*
 
-Requisitos previos:
-
-- Tener instalado el SDK de .NET 8.
-- Tener instalado Git (opcional, para clonar el repositorio).
-
-Pasos para ejecutar:
-
-1. Clonar el repositorio:
-   
-   git clone https://github.com/saryduarte/MiPresentacion.git
-
-2. Entrar en la carpeta del proyecto:
-   
-   cd MiPresentacion
-
-3. Restaurar las dependencias:
-   
-   dotnet restore
-
-4. Compilar la aplicación:
-   
-   dotnet build
-
-5. Ejecutar el programa:
-   
-   dotnet run
+| Tecnología | Descripción |
+| :--- | :--- |
+| *C#* | Lenguaje de programación principal. |
+| *.NET 8* | Plataforma de desarrollo y ejecución. |
+| *Avalonia UI 11* | Framework multiplataforma para crear interfaces gráficas. |
+| *XAML* | Lenguaje de marcado para el diseño de la interfaz de usuario. |
+| *Visual Studio Code* | Entorno de desarrollo integrado (IDE/Editor). |
 
 ---
 
- Aprendizajes obtenidos
+## *Funcionalidades principales*
 
-Con este proyecto pude aprender a crear interfaces gráficas utilizando Avalonia UI 11, relacionar archivos XAML con código C#, implementar eventos y validar la información ingresada por el usuario.
-
-También pude fortalecer mis conocimientos sobre programación orientada a objetos y comprender cómo las acciones del usuario pueden generar respuestas dentro de una aplicación de escritorio.
+* *Ingresar datos:* Permite capturar nombre, apellido y edad mediante campos de texto.
+* *Presentarme:* Procesa los datos y genera un saludo personalizado en pantalla.
+* *Validar información:* Comprueba que ningún campo quede vacío y asegura que la edad sea un número entero mayor que cero.
+* *Limpiar:* Restablece todos los campos de entrada y regresa al mensaje inicial.
+* *Cambiar saludo:* Alterna dinámicamente entre dos formatos de presentación.
 
 ---
 
-Desarrollado por: Saray Duarte
-Proyecto académico: Mi primera aplicación gráfica
-Lenguaje: C#
-Framework: Avalonia UI 11
-Plataforma: .NET 8
+## *Interfaz gráfica*
+
+La estructura visual fue construida empleando los siguientes controles nativos de Avalonia UI:
+
+| Control | Función dentro de la aplicación |
+| :--- | :--- |
+| Window | Ventana principal contenedora de la aplicación. |
+| StackPanel | Contenedor de diseño que organiza los elementos de forma vertical. |
+| TextBlock | Componente para mostrar títulos, etiquetas fijas y mensajes generados. |
+| TextBox | Campos de entrada editables por el usuario. |
+| Button | Controles accionables para disparar los eventos de la aplicación. |
+
+Para lograr un diseño limpio y equilibrado se configuraron propiedades clave como Margin, Spacing, FontSize y x:Name.
+
+---
+
+## *Programación orientada a eventos*
+
+La interacción se gestiona mediante eventos Click, los cuales ejecutan métodos específicos en el backend:
+
+| Evento / Manejador | Descripción de la acción |
+| :--- | :--- |
+| Presentarme_Click | Ejecuta las validaciones y construye la cadena de texto de la presentación. |
+| Limpiar_Click | Vacía las cajas de texto y restaura el estado inicial de la interfaz. |
+| CambiarSaludo_Click | Alterna entre las dos variantes de saludo preconfiguradas. |
+
+### *Validaciones implementadas*
+* string.IsNullOrWhiteSpace(): Evita procesar entradas vacías o compuestas únicamente por espacios.
+* int.TryParse(): Garantiza que el valor ingresado en el campo de edad sea estrictamente numérico.
+* *Condicional lógico (edad > 0):* Asegura que la edad ingresada corresponda a un número entero positivo válido.
+
+---
+
+## *Relación entre XAML y C#*
+
+* *MainWindow.axaml (Vista):* Define la estructura visual jerárquica de la aplicación, incluyendo disposición de controles, márgenes y
+*
